@@ -8,9 +8,13 @@
 
 #### Description:
 **Key Words**: Data Visualization,Unity, C#, Real-time data 
+
 **Required Skills**: Some coding experience is prefered
+
 **Required Software**: [Unity(LTS Release 2020.3.11f1)](https://unity3d.com/unity/qa/lts-releases?version=2020.3&fbclid=IwAR12EF0jA8un6c3K8SSoHDaEABRa_zWN5Wq9-SWNtTnrHU0l2_pofoAute0), Visual Studio or [Visual Studio Code](https://code.visualstudio.com/)
+
 **Required Hardware**: Windows Laptop prefered
+
 **Maximum number of participating students**: 15
 
 <sub>
