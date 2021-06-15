@@ -30,19 +30,27 @@ Day 1 / Jun 28
 
 <sub>
 9:00 - 12:30 (GMT-4:00) Eastern Time (US and Canada)
+  
 09:00 - 12:30 (EST)
+  
 15:00 - 18:30 (CET)
+  
 21:00 - 00:30 (China)
 </sub>
 
 Unity C# workflows and open-source environmental data importing
+
 Day 2 / Jun 29
              
 <sub>
 9:00 - 12:30 (GMT-4:00) Eastern Time (US and Canada)
+
 09:00 - 12:30 (EST)
+
 15:00 - 18:30 (CET)
+
 21:00 - 00:30 (China)
+
 Importing maps and weather data visualization
 
 </sub>
