@@ -54,7 +54,7 @@ Importing maps and weather data visualization
 #### Biayna Bogosian
 FIU,Assistant Professor
 
-<img src="/bio/210521102106389.jpg" alt="Biayna Bogosian" width="100" height="whatever">
+<img src="/pictures/210521102106389.jpg" alt="Biayna Bogosian" width="100" height="whatever">
 
 My academic and professional background in architecture, environmental design, computational design, data science, spatial science, immersive media design has allowed me to move across and connect disciplines and different scales of design. It has also allowed me to understand innovation in architecture within a broader environmental context and explore data-driven and citizen-centric approaches to improve the built environment and our lives. I am currently a doctoral candidate in the Interdisciplinary Media Arts and Practice (iMAP) program at the University of Southern California (USC) and expect to graduate in Spring 2021. I hold a Master of Science in Advanced Architectural Design from Columbia University GSAPP (2010) and a Bachelor of Architecture and Urban Design from Woodbury University SoA (2008). My Ph.D. research focuses on the development of interactive and immersive information visualization media for environmental citizen-science initiatives. My dissertation, entitled "Urban Environmental Interfaces: The Role of Data-driven Immersive Media in Participatory Urban Environmental Literacy and Policy," focuses on the socio-spatial and political dynamics of environmental pollutant monitoring and representation using readily available sensors and immersive representation methods. This ongoing research has been deployed in the cities of Los Angeles, New York, Princeton, Seoul, Shanghai, and Yerevan in various capacities.
 
@@ -63,7 +63,7 @@ My academic and professional background in architecture, environmental design, c
 #### Namju Lee
 NJSTUDI / ESRI,director / developer
 
-<img src="/bio/210522103131900.jpg" alt="Biayna Bogosian" width="100" height="whatever">
+<img src="/pictures/210522103131900.jpg" alt="Biayna Bogosian" width="100" height="whatever">
 
 NJ Namju Lee is an architectural designer, researcher, and lecturer. He has been the principal of NJSTUDIO since 2004, specializing in architecture, computational design, and visualization. He graduated from Seoul National University of Science and Technology(B.S), later, UC Berkeley(MArch), and Harvard Graduate School of Design(MDes). As a researcher, he worked both at UrbanAid Lab at University of Technology, Sydney(UTS), at SENSEable City Lab and Media Lab(Changing Places Group) at Massachusetts Institute of Technology(MIT), and at College of Environmental Design, UC Berkeley. He was invited to workshops and seminars as a lecturer in several universities including Harvard, MIT, Ministry of Labor Korea, and Autodesk Korea, and he taught Digital Design Studio I, II at Sejong University, Seoul, Korea. He published ‘Simulation & Visualization of Architecture’, and contributed some architectural and graphic magazines and tutorials. He has participated in multi-disciplinary exhibitions, the digital film works, and architectural group works in Seoul and Sydney. As a visualization specialist, His collaborators include KPF, HYUNDAI, SAMSUNG, SK, and posco E&C for architectural 3D animation and simulation projects. He works in the integrative and interdisciplinary domain of built environment and technology, with a particular interest in computational design and visualization. Central to his practice is the use of data as the primary methodology in shaping a design process by integrated computation and visualization.
 
@@ -71,7 +71,7 @@ NJ Namju Lee is an architectural designer, researcher, and lecturer. He has been
 #### Maider Llaguno-Munitxa
 UCLouvain,Assistant Professor
 
-<img src="/bio/210520060823997.png" alt="Biayna Bogosian" width="100" height="whatever">
+<img src="/pictures/210520060823997.png" alt="Biayna Bogosian" width="100" height="whatever">
 
 
 Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuses on the study of environmental and data sciences for the development of novel design practices that aim to improve building and urban environmental health. From 2017 until 2020, Maider was an Associate Research Scholar and Postdoctoral researcher at the Department of Civil and Environmental Engineering at Princeton University. Maider obtained her PhD from the ETH Zurich in October 2016. Prior to her PhD studies, in 2010 Maider graduated with -excellence in design- (honours) in Advanced Architecture Design from The Graduate School of Planning and Preservation GSAPP) at Columbia University in New York City, and from the ETSA San Sebastian -Seneca program at the ETSA Barcelona- from where she received her Diploma in Architecture with honours in 2006.
