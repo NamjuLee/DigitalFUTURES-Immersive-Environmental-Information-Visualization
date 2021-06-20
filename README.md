@@ -76,3 +76,47 @@ UCLouvain,Assistant Professor
 
 Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuses on the study of environmental and data sciences for the development of novel design practices that aim to improve building and urban environmental health. From 2017 until 2020, Maider was an Associate Research Scholar and Postdoctoral researcher at the Department of Civil and Environmental Engineering at Princeton University. Maider obtained her PhD from the ETH Zurich in October 2016. Prior to her PhD studies, in 2010 Maider graduated with -excellence in design- (honours) in Advanced Architecture Design from The Graduate School of Planning and Preservation GSAPP) at Columbia University in New York City, and from the ETSA San Sebastian -Seneca program at the ETSA Barcelona- from where she received her Diploma in Architecture with honours in 2006.
 
+
+-------
+
+# Immersive Environmental Information Visualization, using Unity
+#### Data Visualization | Online Workshop | English | North-South Americas
+
+[DigitalFUTURES](https://www.digitalfutures.world/workshops/18.html)
+
+[Git](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization)
+
+##### 1 Interface
+* UI
+* View Control
+
+##### [2 Component](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization/tree/main/Introduction%20to%20Unity/Assets/2_Component) 
+* Parameter
+* AttachComponent
+* Transform
+* Instantiate & Destory
+* Debug & Gizmo & Visualization
+  
+##### [3 Interaction](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization/tree/main/Introduction%20to%20Unity/Assets/3_Interaction)
+* Mouse event
+* Raycast
+* Picking & Regidbody
+* Collision
+* Keyboard Event
+* Keyboard and Collision
+  
+##### [4 Data](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization/tree/main/Introduction%20to%20Unity/Assets/4_Data)
+* Import CSV file
+* Import CSV by URL
+* Import JSON by URL
+* Rest API
+* Import OBJ
+* Import Image
+
+##### [5 Mesh]()
+* Mesh Basic
+* Mesh(Bunny) from OBJ
+* Grid(Field) System and Interpolating data
+
+##### [6 Examples]()
+* GeoJson and Visualization
