@@ -13,7 +13,7 @@ public class ImportCSVFile : MonoBehaviour
     {
 
         string fileName = "Broadway_predictedPM.csv";
-        string path = Path.Combine(Environment.CurrentDirectory, @"Assets\7_Data\1_ImportCSVFile\", fileName);
+        string path = Path.Combine(Environment.CurrentDirectory, @"Assets\4_Data\1_ImportCSVFile\Data\", fileName);
 
         VisData(path);
     }

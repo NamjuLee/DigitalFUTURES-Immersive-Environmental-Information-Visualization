@@ -9,11 +9,11 @@
 #### Description:
 **Key Words**: Data Visualization,Unity, C#, Real-time data 
 
-**Required Skills**: Some coding experience is prefered
+**Required Skills**: Some coding experience is preferred
 
 **Required Software**: [Unity(LTS Release 2020.3.11f1)](https://unity3d.com/unity/qa/lts-releases?version=2020.3&fbclid=IwAR12EF0jA8un6c3K8SSoHDaEABRa_zWN5Wq9-SWNtTnrHU0l2_pofoAute0), Visual Studio or [Visual Studio Code](https://code.visualstudio.com/)
 
-**Required Hardware**: Windows Laptop prefered
+**Required Hardware**: Windows Laptop preferred
 
 **Maximum number of participating students**: 15
 
@@ -61,7 +61,7 @@ My academic and professional background in architecture, environmental design, c
 
 -------
 #### Namju Lee
-NJSTUDI / ESRI,director / developer
+[NJSTUDIO](www.njstudio.co.kr) / director, ESRI / Software engineer 
 
 <img src="/pictures/210522103131900.jpg" alt="Biayna Bogosian" width="100" height="whatever">
 
@@ -84,6 +84,9 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 
 [DigitalFUTURES](https://www.digitalfutures.world/workshops/18.html)
 
+
+
+
 [Git](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization)
 
 ##### 1 Interface
@@ -94,13 +97,13 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 * Parameter
 * AttachComponent
 * Transform
-* Instantiate & Destory
+* Instantiate & Destroy
 * Debug & Gizmo & Visualization
   
 ##### [3 Interaction](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization/tree/main/Introduction%20to%20Unity/Assets/3_Interaction)
 * Mouse event
 * Raycast
-* Picking & Regidbody
+* Picking & Rigidbody
 * Collision
 * Keyboard Event
 * Keyboard and Collision
@@ -120,3 +123,12 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 
 ##### [6 Examples]()
 * GeoJson and Visualization
+
+-------
+Reference:
+
+[Video: Learn C# BASICS in 10 MINUTES!](https://www.youtube.com/watch?v=CPkO1Gek8XQ)
+
+[Video: C# Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=GhQdlIFylQ8)
+
+[C# Tutorial](https://www.w3schools.com/cs/index.php)
