@@ -8,7 +8,7 @@ public class ImportImgFromFile : MonoBehaviour
 	int resolution = 2;
 
 	void Start () {
-		Texture2D texture = GetImage(@"./Assets/4_Data/6_ImportImg/data/Heightmap.png");
+		Texture2D texture = GetImage(@"./Assets/5_Data/6_ImportImg/data/Heightmap.png");
 		BuildTerrain(texture);
     }
 	Texture2D GetImage(string path) {
