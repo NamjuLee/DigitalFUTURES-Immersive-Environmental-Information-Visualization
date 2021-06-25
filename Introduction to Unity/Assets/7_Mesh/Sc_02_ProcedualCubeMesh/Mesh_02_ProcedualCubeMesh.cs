@@ -1,80 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mesh_02_ProcedualCubeMesh : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
-        // Vector3[] vertices = {
-        // new Vector3 (0, 0, 0),
-        // new Vector3 (1, 0, 0),
-        // new Vector3 (1, 1, 0),
-        // new Vector3 (0, 1, 0),
-        // new Vector3 (0, 1, 1),
-        // new Vector3 (1, 1, 1),
-        // new Vector3 (1, 0, 1),
-        // new Vector3 (0, 0, 1),
-
-        // };
-
-        // int[] triangles = {
-        //     0, 2, 1, //face front
-        //     0, 3, 2,
-        //     2, 3, 4, //face top
-        //     2, 4, 5,
-        //     1, 2, 5, //face right
-        //     1, 5, 6,
-        //     0, 7, 4, //face left
-        //     0, 4, 3,
-        //     5, 4, 7, //face back
-        //     5, 7, 6,
-        //     0, 6, 7, //face bottom
-        //     0, 1, 6
-        // };
-
         float offset = 0.5f;
 
         Vector3[] vertices = {
-        // front 
-        new Vector3 (-offset, -offset, -offset),
-        new Vector3 (+offset, -offset, -offset),
-        new Vector3 (+offset, +offset, -offset),
-        new Vector3 (-offset, +offset, -offset),
+            // front 
+            new Vector3 (-offset, -offset, -offset),
+            new Vector3 (+offset, -offset, -offset),
+            new Vector3 (+offset, +offset, -offset),
+            new Vector3 (-offset, +offset, -offset),
 
-        // back
-        new Vector3 (-offset, -offset, +offset),
-        new Vector3 (+offset, -offset, +offset),
-        new Vector3 (+offset, +offset, +offset),
-        new Vector3 (-offset, +offset, +offset),
+            // back
+            new Vector3 (-offset, -offset, +offset),
+            new Vector3 (+offset, -offset, +offset),
+            new Vector3 (+offset, +offset, +offset),
+            new Vector3 (-offset, +offset, +offset),
 
-        // Left 
-        new Vector3 (-offset, -offset, -offset),
-        new Vector3 (-offset, -offset, +offset),
-        new Vector3 (-offset, +offset, +offset),
-        new Vector3 (-offset, +offset, -offset),
+            // Left 
+            new Vector3 (-offset, -offset, -offset),
+            new Vector3 (-offset, -offset, +offset),
+            new Vector3 (-offset, +offset, +offset),
+            new Vector3 (-offset, +offset, -offset),
 
-        // Right 
-        new Vector3 (+offset, -offset, -offset),
-        new Vector3 (+offset, -offset, +offset),
-        new Vector3 (+offset, +offset, +offset),
-        new Vector3 (+offset, +offset, -offset),
+            // Right 
+            new Vector3 (+offset, -offset, -offset),
+            new Vector3 (+offset, -offset, +offset),
+            new Vector3 (+offset, +offset, +offset),
+            new Vector3 (+offset, +offset, -offset),
 
-        // Bottom 
-        new Vector3 (-offset, -offset, -offset),
-        new Vector3 (-offset, -offset, +offset),
-        new Vector3 (+offset, -offset, +offset),
-        new Vector3 (+offset, -offset, -offset),
+            // Bottom 
+            new Vector3 (-offset, -offset, -offset),
+            new Vector3 (-offset, -offset, +offset),
+            new Vector3 (+offset, -offset, +offset),
+            new Vector3 (+offset, -offset, -offset),
 
-        // Top
-        new Vector3 (-offset, +offset, -offset),
-        new Vector3 (-offset, +offset, +offset),
-        new Vector3 (+offset, +offset, +offset),
-        new Vector3 (+offset, +offset, -offset),
+            // Top
+            new Vector3 (-offset, +offset, -offset),
+            new Vector3 (-offset, +offset, +offset),
+            new Vector3 (+offset, +offset, +offset),
+            new Vector3 (+offset, +offset, -offset),
         };
 
+        // each colors in the list are the color of vertices in order.
         Color[] colors = {
             Color.red,
             Color.red,
@@ -105,8 +76,12 @@ public class Mesh_02_ProcedualCubeMesh : MonoBehaviour
             Color.cyan,
             Color.cyan,
             Color.cyan,
-        };
+        };           
+        // // create new colors array where the colors will be created.
+        // colors = new Color[vertices.Length];
+        // for (int i = 0; i < vertices.Length; i++) colors[i] = Color.Lerp(Color.red, Color.green, vertices[i].y);
 
+        // this numbers below indicate the index of vertices
         int[] triangles = {
             // front
             0, 3, 2,
@@ -133,39 +108,34 @@ public class Mesh_02_ProcedualCubeMesh : MonoBehaviour
             20, 21, 22,
         };
 
+        
         MeshRenderer renderer =  this.gameObject.AddComponent<MeshRenderer>();
         // renderer.material = new Material(Shader.Find("Specular"));
         renderer.material = new Material(Shader.Find("Particles/Standard Surface")); // https://docs.unity3d.com/ScriptReference/Shader.Find.html
-
+        
+        // Add MeshFilter to this gameobject
         this.gameObject.AddComponent<MeshFilter>();
-
-        this.transform.position = new Vector3(0, 0, 0);
-
+ 
+        // get the mesh from MeshFilter component, and apply the vertices, triangles, and colors values
         Mesh mesh = GetComponent<MeshFilter>().mesh;
         mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-
-        /*
-        // create new colors array where the colors will be created.
-        Color[] colors = new Color[vertices.Length];
-        for (int i = 0; i < vertices.Length; i++)
-            colors[i] = Color.Lerp(Color.red, Color.green, vertices[i].y);
         mesh.colors = colors;
-        */
-         mesh.colors = colors;
-
-
         mesh.Optimize ();
         mesh.RecalculateNormals();
 
-        }
+        // reset the position
+        this.transform.position = new Vector3(0, 0, 0);
+    }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+
+        // update the rotation of this gameobject
         this.transform.Rotate(new Vector3(1, 0, 0), 0.15f );
         this.transform.Rotate(new Vector3(0, 1, 0), 0.25f );
         this.transform.Rotate(new Vector3(0, 0, 1), 0.35f );
+
     }
 }

@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Component_03_TransformUpdate : MonoBehaviour
 {
-    // Start is called before the first frame update
     GameObject cube;
 
+    // when you use the `public` keyword, you can make a variable visible on the Unity inspector, So that you can assian defalult value of it
+    // However, `[HideInInspector]` this keyword prevent from access the parameters on the Unity inspector. but you can still access the param from other contexts(out of this class).
     [HideInInspector] 
     public float intervalTime = 0.1f;
 
     float time = 0.0f;
-
-    Transform transforms;
     void Start()
     {
         cube = GameObject.Find("MyCube");
@@ -20,6 +17,7 @@ public class Component_03_TransformUpdate : MonoBehaviour
         Debug.Log(cube.tag);
         Debug.Log(cube.transform.position);
 
+        // Transform component is a super important component to update the position, scale, and rotation of the gameobject!
         cube.transform.localScale = new Vector3(2, 1, 1);
        
     }

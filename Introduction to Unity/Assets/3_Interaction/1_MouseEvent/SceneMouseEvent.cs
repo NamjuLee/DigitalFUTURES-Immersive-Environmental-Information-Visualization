@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneMouseEvent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
+        // In this approach, we do not need to use update function because we are using built-in mouse event function below.
+        // however, in case that we use the raycast method that we will learn later, we need to put some code here.
     }
 
     // https://www.google.com/search?q=unity+mouse+down+event&oq=unity+mouse+down&aqs=chrome.1.69i57j0j0i22i30l3j0i10i22i30l2j0i22i30l3.10922j1j7&sourceid=chrome&ie=UTF-8 

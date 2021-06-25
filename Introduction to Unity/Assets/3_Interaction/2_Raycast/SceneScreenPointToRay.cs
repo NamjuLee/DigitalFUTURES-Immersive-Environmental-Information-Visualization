@@ -1,16 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneScreenPointToRay : MonoBehaviour
 {
     int num = 0;
     public GameObject gameObj;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update () {
@@ -23,11 +16,14 @@ public class SceneScreenPointToRay : MonoBehaviour
         Debug.Log(num++.ToString());
         if (Physics.Raycast(ray, out hit)){
             
-
+            // only test geometry which name is `ground`
+            // which is important for performance optimization
+            // alos we can use tag or layer rather than name. 
             if (hit.collider.gameObject.name == "ground") 
             {
                 Debug.Log(num.ToString() + hit.point.ToString());
                 gameObj.transform.position = hit.point;
+                // this LookAt function helps us to rotate geometry. In this case, using normal direction, we are able to maintain the object's orientation based on the surface.
                 gameObj.transform.LookAt(hit.point + hit.normal);
             }
 

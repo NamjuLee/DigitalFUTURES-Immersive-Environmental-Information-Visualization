@@ -10,6 +10,11 @@ public class SceneRayRigidbody : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit)){
             if (hit.rigidbody != null){
+                // Input class is the Unity's built-in class which allows us to access the mouse or keyboard event data
+                // https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonDown.html
+                // 0 = Pressed primary button
+                // 1 = Pressed secondary  button
+                // 2 = Pressed middle click
                 if (Input.GetMouseButtonDown(0)){
                     hit.rigidbody.AddForceAtPosition(ray.direction * pokeForce, hit.point);
                 } else if (Input.GetMouseButtonDown(1)){

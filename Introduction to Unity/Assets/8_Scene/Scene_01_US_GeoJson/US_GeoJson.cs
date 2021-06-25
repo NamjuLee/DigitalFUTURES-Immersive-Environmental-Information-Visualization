@@ -1,41 +1,34 @@
-using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Net;
-using System;
 using System.IO;
 
 public class US_GeoJson : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private string API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // YOUR API
+    // declare a list of list(2D array) to store the vertices
     List<List<Vector3>> vs = new List<List<Vector3>>();
+    // declare a list to store the county names
     List<string> names = new List<string>();
-    void Start()
-    {
+    void Start() {
+        
+        // https://en.wikipedia.org/wiki/GeoJSON
         string url = "https://raw.githubusercontent.com/python-visualization/folium/master/tests/us-counties.json";
         string data = this.GetDataFromJSON(url);
         Debug.Log(data);
 
+        // a custom function to parse GeoJSON data.
 		NJSUnityUtility.GeoJSON.FeatureCollection collection = NJSUnityUtility.GeoJSON.GeoJSONObject.Deserialize(data);
-
 		Debug.Log(collection);
 
 
 		for(int i = 0; i < collection.features.Count; ++i) {
-					//    if (i > 100) return;	
-            if(i > 1) {
-                // return;
-            }
-
+            // get vector data based on features
             List<NJSUnityUtility.GeoJSON.PositionObject> pos = collection.features[i].geometry.AllPositions();
-
-            // List<Vector3> vertices = new List<Vector3>();
             List<Vector2> vertices2 = new List<Vector2>();
-            // vertices2.Add(new Vector2(pos[0].longitude + 0.1f, pos[0].latitude + 0.1f));
             
-            for( int j = 0 ; j < pos.Count -1; ++j) {
+            // construct vector out of longitude(x) and latitude(y) 
+            for(int j = 0 ; j < pos.Count -1; ++j) {
                 NJSUnityUtility.GeoJSON.PositionObject p = pos[j];
 
                 if (j < pos.Count - 1) {
@@ -48,8 +41,6 @@ public class US_GeoJson : MonoBehaviour
              
                 Vector3 v = new Vector3(pos[j].longitude, pos[j].latitude, 0);
                 Vector2 v2 = new Vector2(p.longitude , p.latitude );
-
-                // vertices.Add(v);
                 vertices2.Add(v2);
             }
 
@@ -57,25 +48,18 @@ public class US_GeoJson : MonoBehaviour
             for (int j = 0; j<vertices3D.Length; j++) {
                 vertices3D[j] = new Vector3(vertices2[j].x, vertices2[j].y, 0);
             }
-
-
     
             // Use the triangulator to get indices for creating triangles
+            // because we have no idea about correct triangle from arbitrary boundary condition
             var triangulator = new NJSUnityUtility.Triangulator(vertices2.ToArray());
-            var indices =  triangulator.Triangulate();
-            
-            // // Generate a color for each vertex
-            // var colors = Enumerable.Range(0, vertices3D.Length)
-            //     .Select(i => UnityEngine.Random.ColorHSV())
-            //     .ToArray();
+            int[] indices =  triangulator.Triangulate();
 
-            var col = UnityEngine.Random.ColorHSV();
-            var colors = Enumerable.Range(0, vertices3D.Length)
-                .Select(i => col)
-                .ToArray();
+            // get a random color by the Unity built-in function
+            Color col = UnityEngine.Random.ColorHSV();
+            Color[] colors = Enumerable.Range(0, vertices3D.Length).Select(i => col).ToArray();
 
-            // Create the mesh
-            var mesh = new Mesh {
+            // create the mesh 
+            Mesh mesh = new Mesh {
                 vertices = vertices3D,
                 triangles = indices,
                 colors = colors
@@ -87,70 +71,35 @@ public class US_GeoJson : MonoBehaviour
             string name = collection.features[i].properties["name"];
             names.Add(name);
 
+            // create gameobject with the name string
             GameObject gobj = new GameObject(name);
-
-            // Set up game object with mesh;
-            var meshRenderer = gobj.AddComponent<MeshRenderer>();
+            MeshRenderer meshRenderer = gobj.AddComponent<MeshRenderer>();
             meshRenderer.material = new Material(Shader.Find("Sprites/Default"));
             
-            var filter = gobj.AddComponent<MeshFilter>();
-            filter.mesh = mesh;
+            MeshFilter filter = gobj.AddComponent<MeshFilter>();
+            // update MeshFilter mesh by the mesh be generated before.
+            filter.mesh = mesh; 
         }
-
 
         Debug.Log(names.Count);
         Debug.Log(names);
     }
-
-      private HttpWebRequest DataByCityName(string cityName) {
-    // http://api.openweathermap.org/data/2.5/weather?q=Clarke&appid=ea3a82254235cb5e21e70ff21ef6fe97", cityName, this.API_KEY
-      return WebRequest.Create(String.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", cityName, this.API_KEY)) as HttpWebRequest;
-  }
-  private WeatherInfo GetWeather(HttpWebRequest request) {
-      HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-      StreamReader reader = new StreamReader(response.GetResponseStream());
-      string jsonResponse = reader.ReadToEnd();
-    //   Debug.Log(jsonResponse);
-      WeatherInfo info = JsonUtility.FromJson<WeatherInfo>(jsonResponse);
-      return info;
-  }
     void OnDrawGizmos() {
+        // visualize the boundary of each counties in US
         // Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
-        //  Color color = new Color(1f, 0, 1.0f);
+        // Color color = new Color(1f, 0, 1.0f);
         // for(int y = 0 ; y < this.vs.Count; ++y) {
-        //         Gizmos.DrawLine(this.vs[y][0], this.vs[y][1]);
-        //         Debug.DrawLine(this.vs[y][0], this.vs[y][1], color);
-
+        //     Gizmos.DrawLine(this.vs[y][0], this.vs[y][1]);
+        //     Debug.DrawLine(this.vs[y][0], this.vs[y][1], color);
         // }
     }
     private string GetDataFromJSON(string url) {
+        // these are a routine to download and parse data as string.
         HttpWebRequest request =  (HttpWebRequest)WebRequest.Create(url);
         HttpWebResponse response = (HttpWebResponse)request.GetResponse();
         StreamReader reader = new StreamReader(response.GetResponseStream());
         string jsonResponse = reader.ReadToEnd();
-        // Debug.Log(jsonResponse);
-        // JSONObject info = JsonUtility.FromJson<JSONObject>(jsonResponse);
+        // return the string data which will be converted by the pre-cooked GeoJson data structure
         return jsonResponse;
     }
-
-  [Serializable]
-  public class Weather{
-      public int id;
-      public string main;
-  }
-
-  [Serializable]
-  public class Coord{
-      public float lon;
-      public float lat;
-  }
-
-  [Serializable]
-  public class WeatherInfo{
-      public Coord coord;
-      public int id;
-      public string main;
-      public int timezone;
-      public List<Weather> weather;
-  }
 }

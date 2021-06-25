@@ -1,24 +1,26 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Component_04_InstantiateDestroy : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    // Global variable in this class
     public GameObject refer;
+
+    // we want to track time. Also we could use Unity built-in `Time` class.
     int t = 0;
+    // we want to store gameobject later
     List<GameObject> gs = new List<GameObject>();
 
     bool needInit = true;
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
     void Update() {
 
+        // increase time, which is identical to `t = t + 1`
         t++;
 
         if(needInit) {
@@ -36,7 +38,7 @@ public class Component_04_InstantiateDestroy : MonoBehaviour
 
         } else {
 
-            // Destroy gameobjects
+            // Destroy gameobjects in order
             if ( t  > 60 && this.gs.Count != 0) {
                 print("remove");
                 GameObject g = this.gs[0];

@@ -1,19 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneKeyboardInteraction : MonoBehaviour
 {
     public GameObject box;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html
-    // Update is called once per frame
+
     void Update()
     {
+        // just like playing a game, we use the arrow key on keyboard to control the box above.
+        // https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html
+
          if (Input.GetKey(KeyCode.LeftArrow)) {
             box.transform.position = new Vector3(box.transform.position.x - 0.01f, box.transform.position.y, box.transform.position.z);
             print("LeftArrow key was pressed");
@@ -26,6 +21,9 @@ public class SceneKeyboardInteraction : MonoBehaviour
         } else if (Input.GetKey(KeyCode.DownArrow)) {
             box.transform.position = new Vector3(box.transform.position.x, box.transform.position.y, box.transform.position.z - 0.01f);
             print("DownArrow key was pressed");
+        } else if (Input.GetKey(KeyCode.Space)) {
+            // jump when pressing space on your keyboard
+            box.GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(0, 9f, 0), box.transform.position);
         }
     }
 }
