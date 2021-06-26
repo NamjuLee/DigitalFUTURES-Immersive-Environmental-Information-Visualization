@@ -11,6 +11,9 @@ public class ImportCSVFile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Difference between Structured, Semi-structured and Unstructured data
+        // https://www.geeksforgeeks.org/difference-between-structured-semi-structured-and-unstructured-data/
+        
         // prepare for the local path of data(CSV)
         string fileName = "Broadway_predictedPM.csv";
         string path = Path.Combine(Environment.CurrentDirectory, @"Assets\5_Data\1_ImportCSVFile\Data\", fileName);
