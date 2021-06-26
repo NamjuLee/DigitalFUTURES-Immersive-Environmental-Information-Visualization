@@ -11,7 +11,7 @@
 
 **Required Skills**: Some coding experience is preferred
 
-**Required Software**: [Unity(LTS Release 2020.3.11f1)](https://unity3d.com/unity/qa/lts-releases?version=2020.3&fbclid=IwAR12EF0jA8un6c3K8SSoHDaEABRa_zWN5Wq9-SWNtTnrHU0l2_pofoAute0), Visual Studio or [Visual Studio Code](https://code.visualstudio.com/)
+**Required Software**: [Unity(LTS Release 2020.3.12f1)](https://unity3d.com/unity/qa/lts-releases?version=2020.3&fbclid=IwAR12EF0jA8un6c3K8SSoHDaEABRa_zWN5Wq9-SWNtTnrHU0l2_pofoAute0), Visual Studio or [Visual Studio Code](https://code.visualstudio.com/)
 
 **Required Hardware**: Windows Laptop preferred
 
@@ -85,6 +85,14 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 [DigitalFUTURES](https://www.digitalfutures.world/workshops/18.html)
 
 
+-------
+C# Materials:
+
+[Video: Learn C# BASICS in 10 MINUTES!](https://www.youtube.com/watch?v=CPkO1Gek8XQ)
+
+[Video: C# Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=GhQdlIFylQ8)
+
+[C# Tutorial](https://www.w3schools.com/cs/index.php)
 
 
 [Git](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization)
@@ -124,11 +132,3 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 ##### [6 Examples]()
 * GeoJson and Visualization
 
--------
-Reference:
-
-[Video: Learn C# BASICS in 10 MINUTES!](https://www.youtube.com/watch?v=CPkO1Gek8XQ)
-
-[Video: C# Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=GhQdlIFylQ8)
-
-[C# Tutorial](https://www.w3schools.com/cs/index.php)
