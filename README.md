@@ -84,6 +84,7 @@ Maider Llaguno-Munitxa is Assistant Professor at UCLouvain. Maider's work focuse
 
 [DigitalFUTURES](https://www.digitalfutures.world/workshops/18.html)
 
+[Git](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization)
 
 -------
 C# Materials:
@@ -95,7 +96,7 @@ C# Materials:
 [C# Tutorial](https://www.w3schools.com/cs/index.php)
 
 
-[Git](https://github.com/NamjuLee/DigitalFUTURES-Immersive-Environmental-Information-Visualization)
+-------
 
 ##### 1 Interface
 * UI
