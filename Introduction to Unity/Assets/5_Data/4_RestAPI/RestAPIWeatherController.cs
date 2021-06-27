@@ -5,7 +5,7 @@ using System;
 using System.IO;
 
 public class RestAPIWeatherController  : MonoBehaviour {
-  private string API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // YOUR API
+  private string API_KEY = "e2e94ef6b8780e2e4500b1db42c49fde"; // YOUR API
   public string CityName = "Seoul";
   public float timer = 0.0f;
 
