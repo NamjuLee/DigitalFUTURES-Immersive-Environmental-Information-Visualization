@@ -13,7 +13,7 @@ public class Mesh_01_ProcedualCubeTriMesh : MonoBehaviour
         float offset =1f;
         
         // vertices in order
-        // 4 - 3
+        // 3 - 2
         // |   |
         // 0 - 1
         Vector3[] vertices = {

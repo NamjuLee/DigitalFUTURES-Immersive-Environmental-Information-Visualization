@@ -37,7 +37,7 @@ public class ImportImgFromFile : MonoBehaviour
 				GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 				sphere.transform.position = v;
 				sphere.transform.localScale = new Vector3(1.95f, 1.95f, 1.95f);
-				sphere.GetComponent<Renderer>().material.color = new Color(value , 0 , 0 );
+				sphere.GetComponent<Renderer>().material.color = new Color(value * 1.75f , 0 , 0 );
 			}
 		}
 	}
