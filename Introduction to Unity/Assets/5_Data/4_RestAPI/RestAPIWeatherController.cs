@@ -5,8 +5,11 @@ using System;
 using System.IO;
 
 public class RestAPIWeatherController  : MonoBehaviour {
+  // api.openweathermap.org/data/2.5/weather?q={city name}&appid={e2e94ef6b8780e2e4500b1db42c49fde}
   private string API_KEY = "e2e94ef6b8780e2e4500b1db42c49fde"; // YOUR API
-  public string CityName = "Seoul";
+  string CityName = "Seoul";
+  // string CityName = "New York";
+  // string CityName = "Manhattan";
   public float timer = 0.0f;
 
   // we can apply the height of cylinder by the temperature of the designated place.
@@ -20,6 +23,7 @@ public class RestAPIWeatherController  : MonoBehaviour {
     Debug.Log(info.coord.lat);
     Debug.Log(info.coord.lon);
     Debug.Log("id: " + info.id + ", Name: " + info.name );
+    Debug.Log("temp: " + info.main.temp);
     Debug.Log("temp: " + info.main.temp);
     Debug.Log("main: " + info.weather[0].main);
 
@@ -45,7 +49,7 @@ public class RestAPIWeatherController  : MonoBehaviour {
       Debug.Log(info.coord.lat);
       Debug.Log(info.coord.lon);
       Debug.Log("id: " + info.id + ", Name: " + info.name );
-      Debug.Log("temp: " + info.main.temp);
+      Debug.Log("feels like: " + info.main.feels_like);
       Debug.Log("main: " + info.weather[0].main);
       // update the scale factor by the temperature searched by the keyword
       this.cylinder.transform.localScale = new Vector3(1, (float)info.main.temp * 0.1f, 1);
