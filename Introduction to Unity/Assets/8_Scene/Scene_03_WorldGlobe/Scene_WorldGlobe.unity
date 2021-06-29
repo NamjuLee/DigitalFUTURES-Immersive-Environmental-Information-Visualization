@@ -238,6 +238,7 @@ MonoBehaviour:
   timer: 0
   minRemap: 1
   maxRemap: 28
+  scale: 1
 --- !u!4 &1145009182
 Transform:
   m_ObjectHideFlags: 0
