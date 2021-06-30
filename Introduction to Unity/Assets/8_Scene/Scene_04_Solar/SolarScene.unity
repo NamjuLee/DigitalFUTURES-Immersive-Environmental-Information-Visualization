@@ -1363,8 +1363,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168283229}
-  - component: {fileID: 1168283228}
   - component: {fileID: 1168283230}
+  - component: {fileID: 1168283228}
   m_Layer: 0
   m_Name: main
   m_TagString: Untagged
@@ -1384,9 +1384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86611876d80b56142a537f871e5a3343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LatSlider: {fileID: 1384436125}
-  LatTime: {fileID: 942023703}
-  LatDay: {fileID: 1838388127}
   lat: 38
   time: 13
   day: 150
