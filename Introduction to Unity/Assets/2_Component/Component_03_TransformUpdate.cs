@@ -6,17 +6,19 @@ public class Component_03_TransformUpdate : MonoBehaviour
 
     // when you use the `public` keyword, you can make a variable visible on the Unity inspector, So that you can assian defalult value of it
     // However, `[HideInInspector]` this keyword prevent from access the parameters on the Unity inspector. but you can still access the param from other contexts(out of this class).
-    [HideInInspector] 
+    [HideInInspector]
     public float intervalTime = 0.1f;
 
     float time = 0.0f;
+    bool isIntersect = false;
     void Start()
     {
-        cube = GameObject.Find("MyCube");
+        cube = GameObject.Find("MyCube!!");
         
         Debug.Log(cube.tag);
         Debug.Log(cube.transform.position);
 
+        // https://docs.unity3d.com/ScriptReference/Transform.html
         // Transform component is a super important component to update the position, scale, and rotation of the gameobject!
         cube.transform.localScale = new Vector3(2, 1, 1);
        
@@ -34,6 +36,10 @@ public class Component_03_TransformUpdate : MonoBehaviour
         cube.transform.Rotate(new Vector3(1, 0, 0), 1.5f);
 
         Debug.Log(this.time);
+
+        if (isIntersect) {
+            // cube.transform.position
+        }
     }
 
 
