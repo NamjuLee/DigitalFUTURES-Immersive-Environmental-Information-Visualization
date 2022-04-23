@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO; // needed for File.ReadAllBytes
+using UnityEngine.EventSystems; // needed for IPointerClickHandler
 public class MainUIImage : MonoBehaviour
 {
     // we want to use an image as UI.
@@ -11,6 +12,7 @@ public class MainUIImage : MonoBehaviour
 
         // create the gameobject for image UI
         GameObject imgObject = new GameObject("image");
+        imgObject.AddComponent<ClickAction>();
         imgObject.GetComponent<Transform>().position = new Vector3(0, 0, 0);
         // put the image on a child of the canvas
         imgObject.transform.SetParent(canvas.transform);
@@ -24,7 +26,7 @@ public class MainUIImage : MonoBehaviour
         trans.sizeDelta = new Vector2(25, 25); // the width and height of Rect
 
         // read image into byte by using C# built-in feature
-        byte[] rawData= File.ReadAllBytes (@"./Assets/4_UI/UIImage/image.png");
+        byte[] rawData= File.ReadAllBytes (@"./Assets/4_UI/3_UIImage/image.png");
         // create Texture2d Class to put image as a texture
         Texture2D texture = new Texture2D(1, 1);
         texture.LoadImage(rawData);
@@ -35,5 +37,15 @@ public class MainUIImage : MonoBehaviour
         Image image = imgObject.AddComponent<Image>();
         image.sprite = sp;
             
+    }
+}
+
+
+
+public class ClickAction : MonoBehaviour, IPointerClickHandler
+{ 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("clicked");
     }
 }
