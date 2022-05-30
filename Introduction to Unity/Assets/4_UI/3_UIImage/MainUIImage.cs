@@ -5,8 +5,13 @@ using UnityEngine.EventSystems; // needed for IPointerClickHandler
 public class MainUIImage : MonoBehaviour
 {
     // we want to use an image as UI.
-    void Start()
-    {
+    void Start(){
+
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.name = "myCube";
+        cube.transform.localScale = new Vector3(3, 1, 1);
+        cube.AddComponent<CubeAnimation>();
+
         // get the canvas gameobject
         GameObject canvas =  GameObject.Find("Canvas");
 
@@ -39,13 +44,29 @@ public class MainUIImage : MonoBehaviour
             
     }
 }
-
-
-
 public class ClickAction : MonoBehaviour, IPointerClickHandler
 { 
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("clicked");
+        CubeAnimation aniComp = GameObject.Find("myCube").GetComponent<CubeAnimation>();
+        aniComp.toggle = !aniComp.toggle;
+    }
+}
+public class CubeAnimation : MonoBehaviour {
+    public Vector3 t0 = new Vector3(0, -8, 5);
+    public Vector3 t1 = new Vector3(0, 8, 5);
+    public float speed = 0.0175f;
+    public bool toggle = true;
+	void Update () {
+        if (toggle) {
+            this.transform.position = easingMotion(this.transform.position , t0);
+        } else {
+            this.transform.position = easingMotion(this.transform.position , t1);
+        }
+	}
+    Vector3 easingMotion(Vector3 v1 , Vector3 v2){
+       Vector3 v = v2 - v1;
+       return  v1 + v * Mathf.Log(v.magnitude) * this.speed;
     }
 }
