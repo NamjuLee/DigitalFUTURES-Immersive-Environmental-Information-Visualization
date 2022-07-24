@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 using System.IO; // needed for File.ReadAllBytes
 using UnityEngine.EventSystems; // needed for IPointerClickHandler
@@ -56,8 +57,12 @@ public class ClickAction : MonoBehaviour, IPointerClickHandler
 public class CubeAnimation : MonoBehaviour {
     public Vector3 t0 = new Vector3(0, -8, 5);
     public Vector3 t1 = new Vector3(0, 8, 5);
+    public float dis = 1.0f;
     public float speed = 0.0175f;
     public bool toggle = true;
+    void Start() {
+        this.dis = (t1 - t0).magnitude;
+    }
 	void Update () {
         if (toggle) {
             this.transform.position = easingMotion(this.transform.position , t0);
@@ -65,8 +70,10 @@ public class CubeAnimation : MonoBehaviour {
             this.transform.position = easingMotion(this.transform.position , t1);
         }
 	}
-    Vector3 easingMotion(Vector3 v1 , Vector3 v2){
-       Vector3 v = v2 - v1;
-       return  v1 + v * Mathf.Log(v.magnitude) * this.speed;
+    // https://easings.net/
+    Vector3 easingMotion(Vector3 v1 , Vector3 v2) {
+        Vector3 v = v2 - v1;
+        float magnitude = v.magnitude;
+        return  v1 + v * magnitude * this.speed;
     }
 }
