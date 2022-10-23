@@ -67,7 +67,7 @@ public class MainUIEvent : MonoBehaviour
         this.text.text = "Num of Spheres: " + sphereList.Count;
         int num = 14 + sphereList.Count;
 
-        // if the number of spheres are bigger than 30, we want to stict to 30.
+        // if the number of spheres are bigger than 30, we want to stick to 30.
         this.text.fontSize = num > 30 ? 30 : num;
     }
 }

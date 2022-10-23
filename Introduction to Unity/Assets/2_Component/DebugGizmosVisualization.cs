@@ -6,7 +6,7 @@ public class DebugGizmosVisualization : MonoBehaviour
 
     // debug and gizmo are very useful built-in static functions from the Unity Class
     // This is because, debug and gizmo make it easy to visualize. 
-    // Nomrally, in order to visualize we need to build Gameobject correctly(with Renderer, MeshFilter, Transform, and so on)
+    // Normally, in order to visualize we need to build Gameobject correctly(with Renderer, MeshFilter, Transform, and so on)
     // However, the built-in debug and gizmo allows us render data on screen without such complex gameobject's pipeline.  
     void Update()
     {

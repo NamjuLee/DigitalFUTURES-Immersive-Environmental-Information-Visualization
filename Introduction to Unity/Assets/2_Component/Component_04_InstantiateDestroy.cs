@@ -33,7 +33,7 @@ public class Component_04_InstantiateDestroy : MonoBehaviour
                  t = 0;
             }
 
-            // condition for shifting the mode to destory gameobjects
+            // condition for shifting the mode to destroy gameobjects
             if (this.gs.Count == 10) needInit = false;
 
         } else {

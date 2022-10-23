@@ -88,7 +88,7 @@ public class Mesh_03_Mesh_BunnySimple : MonoBehaviour
 
     }
      void OnDrawGizmos() {
-        // Visualze vertices on the scene
+        // Visualize vertices on the scene
         Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
         for(int i = 0 ; i < this.vs.Count; ++i) {
             Gizmos.DrawSphere(this.vs[i], 0.001f);

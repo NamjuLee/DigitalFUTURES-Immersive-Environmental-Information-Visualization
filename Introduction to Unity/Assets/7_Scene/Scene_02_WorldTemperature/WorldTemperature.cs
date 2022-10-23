@@ -62,7 +62,7 @@ public class WorldTemperature  : MonoBehaviour {
         int[] colorData =  NJSUnityUtility.ColorUtility.GetFalseColor(Remap (info.main.temp, minRemap, maxRemap, 0, 1));
         cylinder.GetComponent<Renderer>().material.color = new Color(colorData[0]/255f, colorData[1]/255f, colorData[2]/255f);
 
-        // update the loation of the sylinder by the latitude and longitude searched by the keyword
+        // update the location of the cylinder by the latitude and longitude searched by the keyword
         // cylinder.transform.Rotate(new Vector3(0, 0, 1), 45f);
         cylinder.transform.localScale = new Vector3(2, info.main.temp , 2);
         cylinder.transform.position = new Vector3(info.coord.lon, info.main.temp , info.coord.lat);

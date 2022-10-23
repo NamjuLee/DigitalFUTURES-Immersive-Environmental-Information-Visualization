@@ -4,7 +4,7 @@ public class Component_03_TransformUpdate : MonoBehaviour
 {
     GameObject cube;
 
-    // when you use the `public` keyword, you can make a variable visible on the Unity inspector, So that you can assian defalult value of it
+    // when you use the `public` keyword, you can make a variable visible on the Unity inspector, So that you can assign default value of it
     // However, `[HideInInspector]` this keyword prevent from access the parameters on the Unity inspector. but you can still access the param from other contexts(out of this class).
     [HideInInspector]
     public float intervalTime = 0.1f;

@@ -19,7 +19,7 @@ public class RestAPIWeatherController  : MonoBehaviour {
     WeatherInfo info = GetWeather(DataByCityName(this.CityName));
 
     // https://openweathermap.org/current
-    // print valuses
+    // print values
     Debug.Log(info.coord.lat);
     Debug.Log(info.coord.lon);
     Debug.Log("id: " + info.id + ", Name: " + info.name );
@@ -32,7 +32,7 @@ public class RestAPIWeatherController  : MonoBehaviour {
     cylinder.name = this.CityName;
     cylinder.GetComponent<Renderer>().material.color = Color.blue;
 
-    // update the loation of the sylinder by the latitude and longitude searched by the keyword
+    // update the location of the cylinder by the latitude and longitude searched by the keyword
     // cylinder.transform.Rotate(new Vector3(0, 0, 1), 45f);
     cylinder.transform.position = new Vector3(info.coord.lon, cylinder.transform.position.y , info.coord.lat);
     this.cylinder = cylinder;

@@ -31,7 +31,7 @@ public class ImportImgFromFileURL : MonoBehaviour
 
             while (!asyncOperation.isDone) yield return null;
 
-			// when the request doen, we will execute the scope of code below
+			// when the request done, we will execute the scope of code below
             if (webRequest.isDone) {
 				// Unity built-in feature to create texture2d by webRequest.
 				Texture2D texture = DownloadHandlerTexture.GetContent(webRequest);
